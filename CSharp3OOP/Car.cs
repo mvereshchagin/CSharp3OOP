@@ -65,5 +65,99 @@ class Car
     //{
     //    _producer = "Lada";
     //}
+
+    // свойство только для чтения
+    public string Description { get; }
+
+    // Свойство на чтение и на запись
+    public string Descrption2 { get; set; }
+
+    // Поле только неа чтение, связанное с переменной класаа _description 
+    // короткая запись
+    public string Descriptin3 => _description;
+
+    public string Descroption4
+    {
+        get
+        {
+            // какие-то манипуляции до отдачи значения
+            return _description;
+        }
+    }
+
+    public string Description5
+    {
+        get => _description;
+    }
+
+    public string Description6
+    {
+        get
+        {
+            return _description;
+        }
+        set
+        {
+            if (String.IsNullOrEmpty(value) || value.Length > 56)
+            {
+                Console.WriteLine("Слишком длинная строка. Игнорирую");
+                return;
+            }
+            _description = value;
+        }
+    }
+
+    public string Description7
+    {
+        get => _description;
+        set
+        {
+            if (String.IsNullOrEmpty(value) || value.Length > 56)
+            {
+                Console.WriteLine("Слишком длинная строка. Игнорирую");
+                return;
+            }
+            _description = value;
+        }
+    }
     #endregion
+
+    #region методы
+    public void Drive()
+    {
+        Console.WriteLine($"{_producer} {Model} has started");
+        counter++;
+    }
+
+    public string WhatHappened()
+    {
+        return "bla-bla-bla";
+    }
+
+    public void PrintInfo(DateTime date)
+    {
+        Console.WriteLine($"{date:dd.MM.yyyy}: {_producer} {Model}");
+    }
+    #endregion
+
+    // Деструктор
+    // Выхывается, когда объект убивается
+    // напрясую в C# с ним не работаем
+    ~Car()
+    {
+
+    }
+
+    // Деконструктор
+    // Разложение класса в кортеж
+    public void Deconstruct(out string producer, out string model, out string description)
+    {
+        producer = _producer;
+        model = Model;
+        description = _description;
+    }
+
+    private static int counter = 0;
+
+    public static int Counter;
 }
