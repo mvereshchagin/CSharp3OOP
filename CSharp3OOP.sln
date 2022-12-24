@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp3OOP", "CSharp3OOP\CSharp3OOP.csproj", "{2B8A8CDF-DF72-4A14-B6B4-9D2E5EDC5369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp3OOP", "CSharp3OOP\CSharp3OOP.csproj", "{2B8A8CDF-DF72-4A14-B6B4-9D2E5EDC5369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{A81356CF-7EE4-4415-87A7-11A956D8D43C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2B8A8CDF-DF72-4A14-B6B4-9D2E5EDC5369}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B8A8CDF-DF72-4A14-B6B4-9D2E5EDC5369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B8A8CDF-DF72-4A14-B6B4-9D2E5EDC5369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A81356CF-7EE4-4415-87A7-11A956D8D43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A81356CF-7EE4-4415-87A7-11A956D8D43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A81356CF-7EE4-4415-87A7-11A956D8D43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A81356CF-7EE4-4415-87A7-11A956D8D43C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

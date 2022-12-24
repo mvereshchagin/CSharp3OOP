@@ -1,4 +1,6 @@
 ﻿namespace CSharp3OOP;
+using System;
+
 
 // Опрделение класса
 class Car
@@ -137,6 +139,18 @@ class Car
     public void PrintInfo(DateTime date)
     {
         Console.WriteLine($"{date:dd.MM.yyyy}: {_producer} {Model}");
+
+        if(true)
+        {
+            int a = 10;
+
+        }
+    }
+
+
+    public static int Sum(int a, int b, int c = 0)
+    {
+        return a + b + c;
     }
     #endregion
 

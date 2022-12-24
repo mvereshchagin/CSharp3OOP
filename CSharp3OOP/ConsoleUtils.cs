@@ -7,6 +7,5 @@ public static class ConsoleUtils
     {
 
     }
-
-d
 }
+
