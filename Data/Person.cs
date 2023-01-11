@@ -1,6 +1,7 @@
 ﻿namespace Data;
 public class Person : System.Object
 {
+    protected const string UniqueName = "Person";
     public Person()
     { }
 
@@ -28,12 +29,30 @@ public class Person : System.Object
 
     public void DoSomething()
     {
+        Console.WriteLine("Person is doing something");
+    }
 
+    public override int GetHashCode()
+    {
+        return FirstName.GetHashCode();
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is not Person)
+            return false;
+
+        var other = obj as Person;
+        if (other is null)
+            return false;
+
+        return this.GetHashCode() == other.GetHashCode();
     }
 }
 
 public class Teacher : Person
 {
+    protected new const string UniqueName = "Teacher";
     public Teacher()
     { }
 
@@ -47,6 +66,16 @@ public class Teacher : Person
     public override string ToString()
     {
         return $"Teacher: {base.ToString()} {Position}";
+    }
+
+    public override void SayHello()
+    {
+        Console.Write($"Hello, teacher, {this}");
+    }
+
+    public new void DoSomething()
+    {
+        Console.WriteLine("Teacher is doing something");
     }
 }
 
@@ -74,7 +103,7 @@ public class Student : Person
     }
 
     /// <summary>
-    /// срктие метода
+    /// скрытие метода
     /// </summary>
     public new void DoSomething()
     {
